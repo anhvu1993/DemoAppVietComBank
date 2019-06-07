@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Cities</key>
+	<array>
+		<dict>
+			<key>CityCode</key>
+			<integer>1</integer>
+			<key>Name</key>
+			<string>Hà Nội</string>
+		</dict>
+		<dict>
+			<key>CityCode</key>
+			<integer>2</integer>
+			<key>Name</key>
+			<string>Hà Giang</string>
+		</dict>
+		<dict>
+			<key>CityCode</key>
+			<integer>4</integer>
+			<key>Name</key>
+			<string>Cao Bằng</string>
+		</dict>
+		<dict>
+			<key>CityCode</key>
+			<integer>6</integer>
+			<key>Name</key>
+			<string>Bắc Kạn</string>
+		</dict>
+		<dict>
+			<key>CityCode</key>
+			<integer>8</integer>
+			<key>Name</key>
+			<string>Tuyên Quang</string>
+		</dict>
+		<dict>
+			<key>CityCode</key>
+			<integer>10</integer>
+			<key>Name</key>
+			<string>Lào Cai</string>
+		</dict>
+		<dict>
+			<key>CityCode</key>
+			<integer>11</integer>
+			<key>Name</key>
+			<string>Điện Biên</string>
+		</dict>
+		<dict>
+			<key>CityCode</key>
+			<integer>12</integer>
+			<key>Name</key>
+			<string>Lai Châu</string>
+		</dict>
+		<dict>
+			<key>CityCode</key>
+			<integer>14</integer>
+			<key>Name</key>
+			<string>Sơn La</string>
+		</dict>
+		<dict>
+			<key>CityCode</key>
+			<integer>15</integer>
+			<key>Name</key>
+			<string>Yên Bái</string>
+		</dict>
+		<dict>
+			<key>CityCode</key>
+			<integer>17</integer>
+			<key>Name</key>
+			<string>Hòa Bình</string>
+		</dict>
+		<dict>
+			<key>CityCode</key>
+			<integer>19</integer>
+			<key>Name</key>
+			<string>Thái Nguyên</string>
+		</dict>
+		<dict>
+			<key>CityCode</key>
+			<integer>20</integer>
+			<key>Name</key>
+			<string>Lạng Sơn</string>
+		</dict>
+		<dict>
+			<key>CityCode</key>
+			<integer>22</integer>
+			<key>Name</key>
+			<string>Quảng Ninh</string>
+		</dict>
+		<dict>
+			<key>CityCode</key>
+			<integer>24</integer>
+			<key>Name</key>
+			<string>Bắc Giang</string>
+		</dict>
+		<dict>
+			<key>CityCode</key>
+			<integer>25</integer>
+			<key>Name</key>
+			<string>Phú Thọ</string>
+		</dict>
+		<dict>
+			<key>CityCode</key>
+			<integer>26</integer>
+			<key>Name</key>
+			<string>Vĩnh Phúc</string>
+		</dict>
+		<dict>
+			<key>CityCode</key>
+			<integer>27</integer>
+			<key>Name</key>
+			<string>Bắc Ninh</string>
+		</dict>
+		<dict>
+			<key>CityCode</key>
+			<integer>30</integer>
+			<key>Name</key>
+			<string>Hải Dương</string>
+		</dict>
+		<dict>
+			<key>CityCode</key>
+			<integer>31</integer>
+			<key>Name</key>
+			<string>Hải Phòng</string>
+		</dict>
+		<dict>
+			<key>CityCode</key>
+			<integer>33</integer>
+			<key>Name</key>
+			<string>Hưng Yên</string>
+		</dict>
+		<dict>
+			<key>CityCode</key>
+			<integer>34</integer>
+			<key>Name</key>
+			<string>Thái Bình</string>
+		</dict>
+		<dict>
+			<key>CityCode</key>
+			<integer>35</integer>
+			<key>Name</key>
+			<string>Hà Nam</string>
+		</dict>
+		<dict>
+			<key>CityCode</key>
+			<integer>36</integer>
+			<key>Name</key>
+			<string>Nam Định</string>
+		</dict>
+		<dict>
+			<key>CityCode</key>
+			<integer>37</integer>
+			<key>Name</key>
+			<string>Ninh Bình</string>
+		</dict>
+		<dict>
+			<key>CityCode</key>
+			<integer>38</integer>
+			<key>Name</key>
+			<string>Thanh Hóa</string>
+		</dict>
+		<dict>
+			<key>CityCode</key>
+			<integer>40</integer>
+			<key>Name</key>
+			<string>Nghệ An</string>
+		</dict>
+		<dict>
+			<key>CityCode</key>
+			<integer>42</integer>
+			<key>Name</key>
+			<string>Hà Tĩnh</string>
+		</dict>
+		<dict>
+			<key>CityCode</key>
+			<integer>44</integer>
+			<key>Name</key>
+			<string>Quảng Bình</string>
+		</dict>
+		<dict>
+			<key>CityCode</key>
+			<integer>45</integer>
+			<key>Name</key>
+			<string>Quảng Trị</string>
+		</dict>
+		<dict>
+			<key>CityCode</key>
+			<integer>46</integer>
+			<key>Name</key>
+			<string>Thừa Thiên Huế</string>
+		</dict>
+		<dict>
+			<key>CityCode</key>
+			<integer>48</integer>
+			<key>Name</key>
+			<string>Đà Nẵng</string>
+		</dict>
+		<dict>
+			<key>CityCode</key>
+			<integer>49</integer>
+			<key>Name</key>
+			<string>Quảng Nam</string>
+		</dict>
+		<dict>
+			<key>CityCode</key>
+			<integer>51</integer>
+			<key>Name</key>
+			<string>Quảng Ngãi</string>
+		</dict>
+		<dict>
+			<key>CityCode</key>
+			<integer>52</integer>
+			<key>Name</key>
+			<string>Bình Định</string>
+		</dict>
+		<dict>
+			<key>CityCode</key>
+			<integer>54</integer>
+			<key>Name</key>
+			<string>Phú Yên</string>
+		</dict>
+		<dict>
+			<key>CityCode</key>
+			<integer>56</integer>
+			<key>Name</key>
+			<string>Khánh Hòa</string>
+		</dict>
+		<dict>
+			<key>CityCode</key>
+			<integer>58</integer>
+			<key>Name</key>
+			<string>Ninh Thuận</string>
+		</dict>
+		<dict>
+			<key>CityCode</key>
+			<integer>60</integer>
+			<key>Name</key>
+			<string>Bình Thuận</string>
+		</dict>
+		<dict>
+			<key>CityCode</key>
+			<integer>62</integer>
+			<key>Name</key>
+			<string>Kon Tum</string>
+		</dict>
+		<dict>
+			<key>CityCode</key>
+			<integer>64</integer>
+			<key>Name</key>
+			<string>Gia Lai</string>
+		</dict>
+		<dict>
+			<key>CityCode</key>
+			<integer>66</integer>
+			<key>Name</key>
+			<string>Đắk Lắk</string>
+		</dict>
+		<dict>
+			<key>CityCode</key>
+			<integer>67</integer>
+			<key>Name</key>
+			<string>Đắk Nông</string>
+		</dict>
+		<dict>
+			<key>CityCode</key>
+			<integer>68</integer>
+			<key>Name</key>
+			<string>Lâm Đồng</string>
+		</dict>
+		<dict>
+			<key>CityCode</key>
+			<integer>70</integer>
+			<key>Name</key>
+			<string>Bình Phước</string>
+		</dict>
+		<dict>
+			<key>CityCode</key>
+			<integer>72</integer>
+			<key>Name</key>
+			<string>Tây Ninh</string>
+		</dict>
+		<dict>
+			<key>CityCode</key>
+			<integer>74</integer>
+			<key>Name</key>
+			<string>Bình Dương</string>
+		</dict>
+		<dict>
+			<key>CityCode</key>
+			<integer>75</integer>
+			<key>Name</key>
+			<string>Đồng Nai</string>
+		</dict>
+		<dict>
+			<key>CityCode</key>
+			<integer>77</integer>
+			<key>Name</key>
+			<string>Bà Rịa - Vũng Tàu</string>
+		</dict>
+		<dict>
+			<key>CityCode</key>
+			<integer>79</integer>
+			<key>Name</key>
+			<string>Hồ Chí Minh</string>
+		</dict>
+		<dict>
+			<key>CityCode</key>
+			<integer>80</integer>
+			<key>Name</key>
+			<string>Long An</string>
+		</dict>
+		<dict>
+			<key>CityCode</key>
+			<integer>82</integer>
+			<key>Name</key>
+			<string>Tiền Giang</string>
+		</dict>
+		<dict>
+			<key>CityCode</key>
+			<integer>83</integer>
+			<key>Name</key>
+			<string>Bến Tre</string>
+		</dict>
+		<dict>
+			<key>CityCode</key>
+			<integer>84</integer>
+			<key>Name</key>
+			<string>Trà Vinh</string>
+		</dict>
+		<dict>
+			<key>CityCode</key>
+			<integer>86</integer>
+			<key>Name</key>
+			<string>Vĩnh Long</string>
+		</dict>
+		<dict>
+			<key>CityCode</key>
+			<integer>87</integer>
+			<key>Name</key>
+			<string>Đồng Tháp</string>
+		</dict>
+		<dict>
+			<key>CityCode</key>
+			<integer>89</integer>
+			<key>Name</key>
+			<string>An Giang</string>
+		</dict>
+		<dict>
+			<key>CityCode</key>
+			<integer>91</integer>
+			<key>Name</key>
+			<string>Kiên Giang</string>
+		</dict>
+		<dict>
+			<key>CityCode</key>
+			<integer>92</integer>
+			<key>Name</key>
+			<string>Cần Thơ</string>
+		</dict>
+		<dict>
+			<key>CityCode</key>
+			<integer>93</integer>
+			<key>Name</key>
+			<string>Hậu Giang</string>
+		</dict>
+		<dict>
+			<key>CityCode</key>
+			<integer>94</integer>
+			<key>Name</key>
+			<string>Sóc Trăng</string>
+		</dict>
+		<dict>
+			<key>CityCode</key>
+			<integer>95</integer>
+			<key>Name</key>
+			<string>Bạc Liêu</string>
+		</dict>
+		<dict>
+			<key>CityCode</key>
+			<integer>96</integer>
+			<key>Name</key>
+			<string>Cà Mau</string>
+		</dict>
+	</array>
+</dict>
+</plist>

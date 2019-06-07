@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QXD-Rq-08y">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Lãi suất-->
+        <scene sceneID="Lv6-pW-pEN">
+            <objects>
+                <viewController id="g2Y-bK-8T5" customClass="InterestRateViewController" customModule="AppVietcombank" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5l7-EU-QW4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="pQz-Nn-KnM">
+                                <rect key="frame" x="0.0" y="88" width="414" height="59.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l5F-g0-lrp" customClass="DesignableButton" customModule="AppVietcombank" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="207" height="59.5"/>
+                                        <color key="backgroundColor" red="0.059989626829999997" green="0.72523397840000003" blue="0.36248284079999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Tiết Kiệm">
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.99999600649999998" green="1" blue="1" alpha="0.60688677229999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="runSaving:" destination="g2Y-bK-8T5" eventType="touchUpInside" id="h7r-bq-j8N"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cGj-ZG-azL" customClass="DesignableButton" customModule="AppVietcombank" customModuleProvider="target">
+                                        <rect key="frame" x="207" y="0.0" width="207" height="59.5"/>
+                                        <color key="backgroundColor" red="0.059989626829999997" green="0.72523397840000003" blue="0.36248284079999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Tiền Gửi có kì hạn">
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.99999600649999998" green="1" blue="1" alpha="0.60688677229999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="runDeposits:" destination="g2Y-bK-8T5" eventType="touchUpInside" id="pDy-vI-lWe"/>
+                                            <action selector="runSaving:" destination="g2Y-bK-8T5" eventType="touchUpInside" id="KdW-c5-XCB"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vMD-AM-ldB">
+                                <rect key="frame" x="0.0" y="147.5" width="414" height="100"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="zVh-F4-HQD">
+                                        <rect key="frame" x="34.5" y="22" width="345" height="56.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cập nhật: 01:49:18 PM, 05/06/2019" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NVd-QW-KcI">
+                                                <rect key="frame" x="0.0" y="0.0" width="345" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Bv6-sP-duU" customClass="TabySegmentedControl" customModule="AppVietcombank" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28.5" width="345" height="29"/>
+                                                <segments>
+                                                    <segment title="VND"/>
+                                                    <segment title="USD"/>
+                                                    <segment title="EUR"/>
+                                                </segments>
+                                                <color key="tintColor" red="0.047976840374202905" green="0.57526967002436558" blue="0.29114508470186518" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="segmented:" destination="g2Y-bK-8T5" eventType="valueChanged" id="rg6-DT-qjR"/>
+                                                </connections>
+                                            </segmentedControl>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.70657888393301482" green="0.71357471446700504" blue="0.71357471446700504" alpha="0.60688677229999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="zVh-F4-HQD" firstAttribute="centerX" secondItem="vMD-AM-ldB" secondAttribute="centerX" id="RfJ-mW-jTl"/>
+                                    <constraint firstItem="zVh-F4-HQD" firstAttribute="width" secondItem="vMD-AM-ldB" secondAttribute="width" multiplier="1/1.2" id="SMx-P4-geJ"/>
+                                    <constraint firstItem="zVh-F4-HQD" firstAttribute="centerY" secondItem="vMD-AM-ldB" secondAttribute="centerY" id="YhR-gA-hyh"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YX3-WT-179" customClass="DesignableView" customModule="AppVietcombank" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="247.5" width="414" height="59.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="U1g-Mv-dja">
+                                        <rect key="frame" x="19" y="0.0" width="376" height="59.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kì hạn tiền gửi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OgK-xH-hRp">
+                                                <rect key="frame" x="0.0" y="0.0" width="188" height="59.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cá nhân" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmr-cq-NM8">
+                                                <rect key="frame" x="188" y="0.0" width="188" height="59.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="U1g-Mv-dja" firstAttribute="centerX" secondItem="YX3-WT-179" secondAttribute="centerX" id="2c9-uv-ULG"/>
+                                    <constraint firstItem="U1g-Mv-dja" firstAttribute="top" secondItem="YX3-WT-179" secondAttribute="top" id="8Le-EL-jMD"/>
+                                    <constraint firstAttribute="bottom" secondItem="U1g-Mv-dja" secondAttribute="bottom" id="CAE-eb-waO"/>
+                                    <constraint firstItem="U1g-Mv-dja" firstAttribute="width" secondItem="YX3-WT-179" secondAttribute="width" multiplier="1/1.1" id="PCl-U4-96V"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bottomBorder" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xKY-K9-M4c">
+                                <rect key="frame" x="0.0" y="307" width="414" height="555"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="fEc-G2-7Eh" detailTextLabel="MpC-Vx-rUx" style="IBUITableViewCellStyleValue1" id="xDI-Rj-QIz">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xDI-Rj-QIz" id="HHe-uA-dQs">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fEc-G2-7Eh">
+                                                    <rect key="frame" x="20" y="12" width="33.5" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MpC-Vx-rUx">
+                                                    <rect key="frame" x="350" y="12" width="44" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="g2Y-bK-8T5" id="aJo-Id-CRN"/>
+                                    <outlet property="delegate" destination="g2Y-bK-8T5" id="nox-Ha-7E1"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vMD-AM-ldB" firstAttribute="trailing" secondItem="OWT-th-8Uw" secondAttribute="trailing" id="2Ja-Ht-jGg"/>
+                            <constraint firstItem="YX3-WT-179" firstAttribute="top" secondItem="vMD-AM-ldB" secondAttribute="bottom" id="4Rt-MH-kjT"/>
+                            <constraint firstItem="vMD-AM-ldB" firstAttribute="height" secondItem="5l7-EU-QW4" secondAttribute="height" multiplier="1/9" id="5BP-QF-eUV"/>
+                            <constraint firstItem="pQz-Nn-KnM" firstAttribute="height" secondItem="5l7-EU-QW4" secondAttribute="height" multiplier="1/15" id="5db-w5-X3J"/>
+                            <constraint firstItem="pQz-Nn-KnM" firstAttribute="top" secondItem="OWT-th-8Uw" secondAttribute="top" id="8VV-H8-ftJ"/>
+                            <constraint firstItem="pQz-Nn-KnM" firstAttribute="leading" secondItem="OWT-th-8Uw" secondAttribute="leading" id="BXN-if-p9k"/>
+                            <constraint firstItem="vMD-AM-ldB" firstAttribute="leading" secondItem="OWT-th-8Uw" secondAttribute="leading" id="PEf-5y-VMi"/>
+                            <constraint firstItem="OWT-th-8Uw" firstAttribute="bottom" secondItem="xKY-K9-M4c" secondAttribute="bottom" id="XiX-a3-qLo"/>
+                            <constraint firstItem="YX3-WT-179" firstAttribute="trailing" secondItem="OWT-th-8Uw" secondAttribute="trailing" id="Yae-P8-ylb"/>
+                            <constraint firstItem="xKY-K9-M4c" firstAttribute="top" secondItem="YX3-WT-179" secondAttribute="bottom" id="Zff-Zq-dpy"/>
+                            <constraint firstItem="YX3-WT-179" firstAttribute="height" secondItem="5l7-EU-QW4" secondAttribute="height" multiplier="1/15" id="bcP-ch-2W1"/>
+                            <constraint firstItem="vMD-AM-ldB" firstAttribute="top" secondItem="pQz-Nn-KnM" secondAttribute="bottom" id="ee9-Rz-jc3"/>
+                            <constraint firstItem="xKY-K9-M4c" firstAttribute="leading" secondItem="OWT-th-8Uw" secondAttribute="leading" id="hfa-Av-dEU"/>
+                            <constraint firstItem="YX3-WT-179" firstAttribute="leading" secondItem="OWT-th-8Uw" secondAttribute="leading" id="jUv-qz-zdl"/>
+                            <constraint firstItem="OWT-th-8Uw" firstAttribute="trailing" secondItem="xKY-K9-M4c" secondAttribute="trailing" id="opp-C6-l37"/>
+                            <constraint firstItem="OWT-th-8Uw" firstAttribute="trailing" secondItem="pQz-Nn-KnM" secondAttribute="trailing" id="q04-HO-HaN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="OWT-th-8Uw"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Lãi suất" id="xbF-za-1sI">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="M8l-jS-qaf">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="CancelHome:" destination="g2Y-bK-8T5" id="1ht-Yn-yqZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="deposits" destination="cGj-ZG-azL" id="97v-rl-Maa"/>
+                        <outlet property="outletSaving" destination="l5F-g0-lrp" id="yIV-Ah-di2"/>
+                        <outlet property="segmented" destination="Bv6-sP-duU" id="ALE-dg-iMf"/>
+                        <outlet property="tableView" destination="xKY-K9-M4c" id="LoV-gG-tFT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="esl-ct-rbo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="971.01449275362324" y="160.71428571428569"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="gtF-SE-CdO">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="b1q-oz-pHt" customClass="PageViewController" customModule="AppVietcombank" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dAi-y9-bg3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="971" y="810"/>
+        </scene>
+        <!--View Controller1-->
+        <scene sceneID="X90-q4-odU">
+            <objects>
+                <viewController storyboardIdentifier="man1" id="Xem-EA-qxO" customClass="ViewController1" customModule="AppVietcombank" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4CR-Fl-mip">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.047976840370000003" green="0.57526966999999996" blue="0.2911450847" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="0Gx-gt-hqE"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jpc-QI-f2h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1745" y="846"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Pem-yr-ddZ">
+            <objects>
+                <navigationController storyboardIdentifier="InterestRate" automaticallyAdjustsScrollViewInsets="NO" id="QXD-Rq-08y" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="npg-qn-xtR">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.059989626829999997" green="0.72523397840000003" blue="0.36248284079999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OpR-It-jqA">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="g2Y-bK-8T5" kind="relationship" relationship="rootViewController" id="nMv-b4-SvW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z3P-UQ-qBr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="60.869565217391312" y="160.71428571428569"/>
+        </scene>
+        <!--View Controller3-->
+        <scene sceneID="nD3-3l-eYZ">
+            <objects>
+                <viewController storyboardIdentifier="man3" id="iro-uY-Byj" customClass="ViewController3" customModule="AppVietcombank" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d3z-6x-tfE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.53213745355606079" green="0.87449401617050171" blue="0.93520879745483398" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="K54-LR-UbY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gaD-mU-HfD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3481" y="859"/>
+        </scene>
+        <!--View Controller2-->
+        <scene sceneID="iyF-wv-hiN">
+            <objects>
+                <viewController storyboardIdentifier="man2" id="OQW-nC-oqA" customClass="ViewController2" customModule="AppVietcombank" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kfC-4q-5ig">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.78883260488510132" green="0.22626006603240967" blue="0.16310402750968933" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="cgS-ov-Xww"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="giU-pX-2Ft" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2623" y="846"/>
+        </scene>
+    </scenes>
+</document>
