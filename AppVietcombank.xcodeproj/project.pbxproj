@@ -13,7 +13,6 @@
 		0407EAA9229B86D700EAF655 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0407EAA8229B86D700EAF655 /* Assets.xcassets */; };
 		0407EAAC229B86D700EAF655 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0407EAAA229B86D700EAF655 /* LaunchScreen.storyboard */; };
 		0407EABD229B984F00EAF655 /* MapATMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0407EABC229B984F00EAF655 /* MapATMViewController.swift */; };
-		041FC60422A56908000F6315 /* MenuTopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041FC60222A56908000F6315 /* MenuTopTableViewCell.swift */; };
 		041FC60722A56B39000F6315 /* Bank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041FC60622A56B38000F6315 /* Bank.swift */; };
 		0424629622A7976B0036C4E4 /* InterestRate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0424629522A7976B0036C4E4 /* InterestRate.storyboard */; };
 		0424629822A79ADD0036C4E4 /* InterestRateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424629722A79ADD0036C4E4 /* InterestRateViewController.swift */; };
@@ -48,7 +47,6 @@
 		0407EAAB229B86D700EAF655 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0407EAAD229B86D700EAF655 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0407EABC229B984F00EAF655 /* MapATMViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapATMViewController.swift; sourceTree = "<group>"; };
-		041FC60222A56908000F6315 /* MenuTopTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTopTableViewCell.swift; sourceTree = "<group>"; };
 		041FC60622A56B38000F6315 /* Bank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bank.swift; sourceTree = "<group>"; };
 		0424629522A7976B0036C4E4 /* InterestRate.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InterestRate.storyboard; sourceTree = "<group>"; };
 		0424629722A79ADD0036C4E4 /* InterestRateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestRateViewController.swift; sourceTree = "<group>"; };
@@ -142,7 +140,6 @@
 				04C808A9229D427F004C715E /* UIViewExtension.swift */,
 				049821DD229E310000B17721 /* UIView-extention.swift */,
 				049821DA229E2D4E00B17721 /* MenuTopView.swift */,
-				041FC60222A56908000F6315 /* MenuTopTableViewCell.swift */,
 				049821E2229E899400B17721 /* DataSevice.swift */,
 				0473E44A229FD89E0083FB08 /* TableViewCell.swift */,
 				0497689622A4C73F001463E9 /* DataSeviceCities.swift */,
@@ -333,7 +330,6 @@
 				049821DB229E2D4E00B17721 /* MenuTopView.swift in Sources */,
 				04C808AA229D427F004C715E /* UIViewExtension.swift in Sources */,
 				0407EABD229B984F00EAF655 /* MapATMViewController.swift in Sources */,
-				041FC60422A56908000F6315 /* MenuTopTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

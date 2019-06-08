@@ -58,7 +58,8 @@ class VndViewController: NSObject, UITableViewDelegate, UITableViewDataSource {
                         Interestrate(month: 9, rate: 6.8),
                          Interestrate(month: 12, rate: 6.8),
                          Interestrate(month: 24, rate: 6.8),
-                         Interestrate(month: 36, rate: 6.8)
+                         Interestrate(month: 36, rate: 6.8),
+                         Interestrate(month: 48, rate: 6.8)
                                                                                                         
     ]
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -81,7 +82,8 @@ class UsdViewController: NSObject, UITableViewDataSource, UITableViewDelegate {
                         Interestrate(month: 9, rate: 0.00),
                         Interestrate(month: 12, rate: 0.00),
                         Interestrate(month: 24, rate: 0.00),
-                        Interestrate(month: 36, rate: 0.00)
+                        Interestrate(month: 36, rate: 0.00),
+                        Interestrate(month: 48, rate: 0.00)
         
     ]
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -90,10 +92,13 @@ class UsdViewController: NSObject, UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        var dataRate = monthAndrate[indexPath.row]
+        let dataRate = monthAndrate[indexPath.row]
         cell.textLabel?.text = ("Tháng \(dataRate.month)")
         cell.detailTextLabel?.text = ("\(dataRate.rate)%")
         return cell
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 70
     }
 }
 
@@ -105,7 +110,8 @@ class EurViewController: NSObject, UITableViewDataSource, UITableViewDelegate {
                         Interestrate(month: 9, rate: 0.15),
                         Interestrate(month: 12, rate: 0.3),
                         Interestrate(month: 24, rate: 0.3),
-                        Interestrate(month: 36, rate: 0.3)
+                        Interestrate(month: 36, rate: 0.3),
+                        Interestrate(month: 48, rate: 0.3)
         
     ]
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -114,10 +120,13 @@ class EurViewController: NSObject, UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-         var dataRate = monthAndrate[indexPath.row]
+        let dataRate = monthAndrate[indexPath.row]
         cell.textLabel?.text = ("Tháng \(dataRate.month)")
         cell.detailTextLabel?.text = ("\(dataRate.rate)%")
         return cell
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 70
     }
 }
 

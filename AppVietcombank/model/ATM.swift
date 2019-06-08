@@ -11,6 +11,8 @@ import UIKit
 struct ATM: Decodable {
     var addressbank: String?
     var name: String?
+    var tatitudeBank: Double?
+    var longitudeBank: Double?
     var tatitudeAtm: Double?
     var longitudeAtm: Double?
     var tatitudebranch: Double?

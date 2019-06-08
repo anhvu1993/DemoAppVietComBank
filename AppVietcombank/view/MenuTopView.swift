@@ -7,39 +7,53 @@
 //
 
 import UIKit
+extension Notification.Name {
+    static var atm = Notification.Name("ATM")
+    static var chiNhanhButton = Notification.Name("chiNhanhButton")
+    static var phongGDButton = Notification.Name("phongGDButton")
+    static var truSoChinhButton = Notification.Name("truSoChinhButton")
+}
+
+
 class MenuTopView: UIView {
     weak var selectbutton: UIButton?
-    @IBOutlet var Check: [UIButton]!
-    @IBOutlet weak var CheckAll: UIButton!
+    @IBOutlet var allButtonList: [UIButton]!
+    @IBOutlet weak var atmButton: UIButton!
+    @IBOutlet weak var chiNhanhButton: UIButton!
+    @IBOutlet weak var phongGDButton: UIButton!
+    @IBOutlet weak var truSoChinhButton: UIButton!
+    
+    @IBOutlet weak var checkAll: UIButton!
     //    @IBOutlet weak var coverButtonAdress: UIButton!
     @IBOutlet weak var coverButton: UIButton!
     @IBAction func clickButton(_ sender: Any) {
         isOpen = false
     }
-    var isSelectedAll = true {
-        didSet {
-            let title = isSelectedAll ? "Chọn Tất cả" : "Bỏ chọn"
-            CheckAll.setTitle(title, for: .normal)
+    
+    @IBAction func onClickSelectAllButton(_ sender: UIButton) {
+        allButtonList.forEach{
+            $0.isSelected = checkAll.isSelected
         }
-    }
-    @IBAction func check(_ sender: UIButton) {
-        Check.forEach{
-        $0.isSelected = isSelectedAll
-        }
-        isSelectedAll = !isSelectedAll
+        checkAll.isSelected.toggle()
     }
     @IBAction func ckeckAddress(_ sender: UIButton) {
         sender.isSelected.toggle()
-        isSelectedAll = Check.filter{$0.isSelected}.count == 0
+        switch sender {
+        case atmButton:
+            NotificationCenter.default.post(name: .atm, object: atmButton, userInfo: nil)
+        case  chiNhanhButton:
+            NotificationCenter.default.post(name: .chiNhanhButton, object: chiNhanhButton, userInfo: nil)
+        case phongGDButton:
+            NotificationCenter.default.post(name: .phongGDButton, object: nil, userInfo: nil)
+        case truSoChinhButton:
+            NotificationCenter.default.post(name: .truSoChinhButton, object: nil, userInfo: nil)
+            
+        default:
+            break
+        }
+        checkAll.isSelected = allButtonList.filter{$0.isSelected}.count == 0
     }
     
-    //    @IBAction func clickButtonAdress(_ sender: Any) {
-    //        onAdress = false
-    //    }
-    //
-    //    @IBAction func offAdress(_ sender: Any) {
-    //        onAdress = false
-    //    }
     var isOpen:Bool = false {
         didSet {
             coverButton.alpha = isOpen ? 0.6 : 0
@@ -52,18 +66,11 @@ class MenuTopView: UIView {
     }
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        allButtonList.forEach{$0.isSelected = true}
+        checkAll.isSelected = false
+        
     }
-    //
-    //    var onAdress: Bool = false {
-    //        didSet {
-    //            coverButtonAdress.alpha = onAdress ? 0.6 : 0
-    //            self.alpha = self.onAdress ? 1 : 0
-    //            if !onAdress {
-    //                self.removeFromSuperview()
-    //                selectbutton?.isSelected = false
-    //            }
-    //        }
-    //    }
-    //
+    
 }
 
