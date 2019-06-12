@@ -8,6 +8,6 @@
 
 import Foundation
 struct Interestrate {
-    var month: Int
+    var month: String
     var rate: Double
 }

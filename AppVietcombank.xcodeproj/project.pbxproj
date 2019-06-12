@@ -16,6 +16,7 @@
 		041FC60722A56B39000F6315 /* Bank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041FC60622A56B38000F6315 /* Bank.swift */; };
 		0424629622A7976B0036C4E4 /* InterestRate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0424629522A7976B0036C4E4 /* InterestRate.storyboard */; };
 		0424629822A79ADD0036C4E4 /* InterestRateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424629722A79ADD0036C4E4 /* InterestRateViewController.swift */; };
+		045CD50F22AF5AD3003E69B9 /* ShowInterestRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045CD50E22AF5AD3003E69B9 /* ShowInterestRate.swift */; };
 		0473E44B229FD89E0083FB08 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0473E44A229FD89E0083FB08 /* TableViewCell.swift */; };
 		0497688F22A4B2B1001463E9 /* WebGooglemaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0497688E22A4B2B1001463E9 /* WebGooglemaoViewController.swift */; };
 		0497689122A4C574001463E9 /* Cities.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0497689022A4C574001463E9 /* Cities.plist */; };
@@ -28,10 +29,6 @@
 		049821DE229E310000B17721 /* UIView-extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049821DD229E310000B17721 /* UIView-extention.swift */; };
 		049821E0229E885800B17721 /* ATM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049821DF229E885800B17721 /* ATM.swift */; };
 		049821E3229E899400B17721 /* DataSevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049821E2229E899400B17721 /* DataSevice.swift */; };
-		04BC068522A80AE900FCBC39 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BC067E22A80AE900FCBC39 /* ViewController2.swift */; };
-		04BC068722A80AE900FCBC39 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BC068022A80AE900FCBC39 /* PageViewController.swift */; };
-		04BC068922A80AE900FCBC39 /* ViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BC068222A80AE900FCBC39 /* ViewController1.swift */; };
-		04BC068B22A80AE900FCBC39 /* ViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BC068422A80AE900FCBC39 /* ViewController3.swift */; };
 		04BF2BB222A914CF00D659B6 /* customSegmented.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF2BB122A914CF00D659B6 /* customSegmented.swift */; };
 		04C1FACA22AA0DC30006AC77 /* Interestrate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C1FAC922AA0DC30006AC77 /* Interestrate.swift */; };
 		04C808AA229D427F004C715E /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C808A9229D427F004C715E /* UIViewExtension.swift */; };
@@ -50,6 +47,7 @@
 		041FC60622A56B38000F6315 /* Bank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bank.swift; sourceTree = "<group>"; };
 		0424629522A7976B0036C4E4 /* InterestRate.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InterestRate.storyboard; sourceTree = "<group>"; };
 		0424629722A79ADD0036C4E4 /* InterestRateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestRateViewController.swift; sourceTree = "<group>"; };
+		045CD50E22AF5AD3003E69B9 /* ShowInterestRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowInterestRate.swift; sourceTree = "<group>"; };
 		0473E44A229FD89E0083FB08 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		0497688E22A4B2B1001463E9 /* WebGooglemaoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebGooglemaoViewController.swift; sourceTree = "<group>"; };
 		0497689022A4C574001463E9 /* Cities.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Cities.plist; sourceTree = "<group>"; };
@@ -62,10 +60,6 @@
 		049821DD229E310000B17721 /* UIView-extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView-extention.swift"; sourceTree = "<group>"; };
 		049821DF229E885800B17721 /* ATM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATM.swift; sourceTree = "<group>"; };
 		049821E2229E899400B17721 /* DataSevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSevice.swift; sourceTree = "<group>"; };
-		04BC067E22A80AE900FCBC39 /* ViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
-		04BC068022A80AE900FCBC39 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
-		04BC068222A80AE900FCBC39 /* ViewController1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController1.swift; sourceTree = "<group>"; };
-		04BC068422A80AE900FCBC39 /* ViewController3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController3.swift; sourceTree = "<group>"; };
 		04BF2BB122A914CF00D659B6 /* customSegmented.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customSegmented.swift; sourceTree = "<group>"; };
 		04C1FAC922AA0DC30006AC77 /* Interestrate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interestrate.swift; sourceTree = "<group>"; };
 		04C808A9229D427F004C715E /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
@@ -140,6 +134,7 @@
 				04C808A9229D427F004C715E /* UIViewExtension.swift */,
 				049821DD229E310000B17721 /* UIView-extention.swift */,
 				049821DA229E2D4E00B17721 /* MenuTopView.swift */,
+				045CD50E22AF5AD3003E69B9 /* ShowInterestRate.swift */,
 				049821E2229E899400B17721 /* DataSevice.swift */,
 				0473E44A229FD89E0083FB08 /* TableViewCell.swift */,
 				0497689622A4C73F001463E9 /* DataSeviceCities.swift */,
@@ -156,10 +151,6 @@
 				0497688E22A4B2B1001463E9 /* WebGooglemaoViewController.swift */,
 				0497689A22A4CF39001463E9 /* BaseTableViewController.swift */,
 				0424629722A79ADD0036C4E4 /* InterestRateViewController.swift */,
-				04BC068022A80AE900FCBC39 /* PageViewController.swift */,
-				04BC068222A80AE900FCBC39 /* ViewController1.swift */,
-				04BC067E22A80AE900FCBC39 /* ViewController2.swift */,
-				04BC068422A80AE900FCBC39 /* ViewController3.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -310,8 +301,6 @@
 			files = (
 				0497689522A4C698001463E9 /* Cities.swift in Sources */,
 				041FC60722A56B39000F6315 /* Bank.swift in Sources */,
-				04BC068B22A80AE900FCBC39 /* ViewController3.swift in Sources */,
-				04BC068922A80AE900FCBC39 /* ViewController1.swift in Sources */,
 				0497689922A4C8E1001463E9 /* Districts.swift in Sources */,
 				049821E3229E899400B17721 /* DataSevice.swift in Sources */,
 				0407EAA4229B86D700EAF655 /* SearchATMViewController.swift in Sources */,
@@ -323,8 +312,7 @@
 				0424629822A79ADD0036C4E4 /* InterestRateViewController.swift in Sources */,
 				0407EAA2229B86D700EAF655 /* AppDelegate.swift in Sources */,
 				04BF2BB222A914CF00D659B6 /* customSegmented.swift in Sources */,
-				04BC068722A80AE900FCBC39 /* PageViewController.swift in Sources */,
-				04BC068522A80AE900FCBC39 /* ViewController2.swift in Sources */,
+				045CD50F22AF5AD3003E69B9 /* ShowInterestRate.swift in Sources */,
 				0497688F22A4B2B1001463E9 /* WebGooglemaoViewController.swift in Sources */,
 				0497689B22A4CF3A001463E9 /* BaseTableViewController.swift in Sources */,
 				049821DB229E2D4E00B17721 /* MenuTopView.swift in Sources */,

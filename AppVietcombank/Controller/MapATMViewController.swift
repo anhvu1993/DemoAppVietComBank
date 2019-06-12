@@ -12,36 +12,25 @@ import GoogleMaps
 import GooglePlacePicker
 
 class MapATMViewController: UIViewController{
-    var menutopView = MenuTopView()
-    
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var addressLabel: UILabel!
-    @IBOutlet weak var mapView: GMSMapView! {
-        didSet {
-            print(mapView)
-        }
-    }
+    @IBOutlet weak var mapView: GMSMapView!
     @IBOutlet weak var pinContansGps: NSLayoutConstraint!
     @IBOutlet weak var gps: UIImageView!
-    
+    var arraymarketAtm = [GMSMarker]()
+    var atmMarkers = [GMSMarker]()
+    var branchMarkers = [GMSMarker]()
     var atms = [ATM](){
-            didSet {
-                atms.forEach{ data in
-                    let position = CLLocationCoordinate2D(latitude: data.tatitudebranch!, longitude: data.longitudebranch!)
-                    addMarker(at: position, name: data.name!, logo: "6")
-                    let branchBank = CLLocationCoordinate2D(latitude: data.tatitudeBank!, longitude: data.longitudeBank!)
-                    addMarker(at: branchBank, name: "Ngan hàng VietCombank", logo: "12")
-                }
-            }
-        }
-    var atm: ATM? {
         didSet {
-            if let data = atm {
-                //                addMarker(at: CLLocationCoordinate2D(latitude: data.tatitudeAtm!, longitude: data.longitudeAtm!), name: data.name!, logo: "6")
+            atms.forEach{ data in
+                let position = CLLocationCoordinate2D(latitude: data.tatitudebranch!, longitude: data.longitudebranch!)
+                addBranchMarker(at: position, name: data.name!, logo: "6")
+                let branchBank = CLLocationCoordinate2D(latitude: data.tatitudeBank!, longitude: data.longitudeBank!)
+                addATMMarker(at: branchBank, name: "Ngan hàng VietCombank", logo: "12")
             }
         }
     }
-    
+    var atm: ATM?
     var result = true {
         didSet {
             gps.alpha = self.result ? 0 : 1
@@ -58,70 +47,90 @@ class MapATMViewController: UIViewController{
     }
     
     //    MARK: danh dau dia diem
-    func addMarker(at position: CLLocationCoordinate2D, name: String, logo: String) {
-        let marker = GMSMarker(position: position)
+    func addATMMarker(at position: CLLocationCoordinate2D, name: String, logo: String) {
+        var marker = GMSMarker(position: position)
         marker.title = name
         marker.icon = UIImage(named: logo)
         marker.map = mapView
-        
+        atmMarkers.append(marker)
     }
     
-    func removerMarker(at position: CLLocationCoordinate2D, name: String, logo: String) {
-        let marker = GMSMarker(position: position)
+    func addBranchMarker(at position: CLLocationCoordinate2D, name: String, logo: String) {
+        var marker = GMSMarker(position: position)
         marker.title = name
         marker.icon = UIImage(named: logo)
         marker.map = mapView
-        marker.map?.clear()
+        branchMarkers.append(marker)
+    }
     
+    func removeMarkers(mapView: GMSMapView){
+        for (index, _) in arraymarketAtm.enumerated() {
+            print("Item \(index)")
+            self.arraymarketAtm[index].map = nil
+        }
     }
     func getdatafromNotification() {
-        NotificationCenter.default.addObserver(self, selector: #selector(actionchinhanh), name: .chiNhanhButton, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(actionAtm), name: .atm, object: nil)
-        //        NotificationCenter.default.addObserver(self, selector: #selector(actionphongGD), name: .phongGDButton, object: nil)
-        //        NotificationCenter.default.addObserver(self, selector: #selector(actiontrusochinh), name: .truSoChinhButton, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(action), name: .key, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(showBranchMarket), name: .showBranch, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(showAtmMarker), name: .showAtm, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(getDataArrayAtm), name: .dataBankOnMap , object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(showAllMarker), name: .showAllButton , object: nil)
     }
     
-    @objc func action(data: Notification) {
+    @objc func getDataArrayAtm(data: Notification) {
         if let datas = data.object as? [ATM] {
             DispatchQueue.main.async {
                 self.atms = datas
             }}
     }
-    @objc func actionchinhanh(data : Notification){
-         guard let data = data.object as? UIButton else {return}
-        if data.isSelected == true {
-            atms.forEach{ data in
-                let position = CLLocationCoordinate2D(latitude: data.tatitudebranch!, longitude: data.longitudebranch!)
-                addMarker(at: position, name: data.name!, logo: "6")}
-        } else {
-            atms.forEach{ data in
-                let position = CLLocationCoordinate2D(latitude: data.tatitudebranch!, longitude: data.longitudebranch!)
-                removerMarker(at: position, name: data.name!, logo: "6")}
-        }
-}
     
-    @objc func actionAtm(data : Notification){
-        guard let data = data.object as? UIButton else {return}
-        if data.isSelected == true {
-            atms.forEach{ data in
-                let position = CLLocationCoordinate2D(latitude: data.tatitudeBank!, longitude: data.longitudeBank!)
-                addMarker(at: position, name: data.name!, logo: "12")}
-        } else {
-            atms.forEach{ data in
-                let position = CLLocationCoordinate2D(latitude: data.tatitudeBank!, longitude: data.longitudeBank!)
-                removerMarker(at: position, name: data.name!, logo: "12")}
+    @objc func showAllMarker(data: Notification) {
+        if let data = data.object as? UIButton {
+            if data.isSelected == true {
+                branchMarkers.forEach{ marker in
+                    marker.map = mapView
+                atmMarkers.forEach{ maker in
+                        maker.map = mapView
+                    }
+                }
+            } else {
+                branchMarkers.forEach { (marker) in
+                    marker.map?.clear()
+                }
+                atmMarkers.forEach{ (marker) in
+                    marker.map?.clear()
+                }
+            }
         }
     }
-    
+    @objc func showBranchMarket(data : Notification){
+        guard let data = data.object as? UIButton else {return}
+        if data.isSelected == true {
+            branchMarkers.forEach{ marker in
+                marker.map = mapView
+            }
+        } else {
+            branchMarkers.forEach { (marker) in
+                marker.map = nil
+            }
+        }
+    }
+    @objc func showAtmMarker(data : Notification){
+        guard let data = data.object as? UIButton else {return}
+        if data.isSelected == true {
+            atmMarkers.forEach{ maker in
+                maker.map = mapView
+            }
+        } else {
+            atmMarkers.forEach{ (marker) in
+                marker.map = nil
+            }
+        }
+    }
     //    lay dia chi
     
     private func reverseGeocodeCoordinate(_ coordinate: CLLocationCoordinate2D) {
-        
-        
         // 1 Tạo một GMSGeocoder đối tượng để biến tọa độ vĩ độ và kinh độ thành địa chỉ đường phố.
         let geocoder = GMSGeocoder()
-        
         // 2 Yêu cầu trình mã hóa địa lý đảo ngược mã địa lý tọa độ được truyền cho phương thức. Sau đó nó xác minh có một địa chỉ trong phản hồi của loại GMSAddress. Đây là một lớp mô hình cho các địa chỉ được trả về bởi GMSGeocoder.
         geocoder.reverseGeocodeCoordinate(coordinate) { response, error in
             self.addressLabel.unlock()
@@ -137,11 +146,8 @@ class MapATMViewController: UIViewController{
                 self.pinContansGps.constant = ((labelHeight - self.view.safeAreaInsets.top) * 0.5)
                 self.view.layoutIfNeeded()
             }
-            
         }
     }
-    
-    
 }
 // MARK: - CLLocationManagerDelegate
 //1 Bạn tạo một MapViewControllerphần mở rộng phù hợp với CLLocationManagerDelegate.
@@ -243,7 +249,7 @@ extension MapATMViewController: UITextFieldDelegate, GMSAutocompleteViewControll
         self.searchTextField.text = place.formattedAddress
         print("Place attributions: \(String(describing: place.attributions))")
         //       tim dia diem
-        let camera = GMSCameraUpdate.setTarget(place.coordinate, zoom: 11)
+        let camera = GMSCameraUpdate.setTarget(place.coordinate, zoom: 15)
         mapView.animate(with: camera)
         self.dismiss(animated: true, completion: nil)
     }

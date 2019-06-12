@@ -8,20 +8,16 @@
 
 import UIKit
 extension Notification.Name {
-    static var atm = Notification.Name("ATM")
-    static var chiNhanhButton = Notification.Name("chiNhanhButton")
-    static var phongGDButton = Notification.Name("phongGDButton")
-    static var truSoChinhButton = Notification.Name("truSoChinhButton")
+    static var showAllButton = Notification.Name("showAll")
+    static var showAtm       = Notification.Name("showAtm")
+    static var showBranch    = Notification.Name("showBranch")
 }
-
-
 class MenuTopView: UIView {
     weak var selectbutton: UIButton?
     @IBOutlet var allButtonList: [UIButton]!
-    @IBOutlet weak var atmButton: UIButton!
-    @IBOutlet weak var chiNhanhButton: UIButton!
-    @IBOutlet weak var phongGDButton: UIButton!
-    @IBOutlet weak var truSoChinhButton: UIButton!
+    @IBOutlet weak var showAtm: UIButton!
+    @IBOutlet weak var showBranch: UIButton!
+    @IBOutlet weak var showAll: UIButton!
     
     @IBOutlet weak var checkAll: UIButton!
     //    @IBOutlet weak var coverButtonAdress: UIButton!
@@ -31,6 +27,12 @@ class MenuTopView: UIView {
     }
     
     @IBAction func onClickSelectAllButton(_ sender: UIButton) {
+        switch sender {
+        case showAll:
+              NotificationCenter.default.post(name: .showAllButton, object: showAll, userInfo: nil)
+        default:
+            break
+        }
         allButtonList.forEach{
             $0.isSelected = checkAll.isSelected
         }
@@ -39,15 +41,10 @@ class MenuTopView: UIView {
     @IBAction func ckeckAddress(_ sender: UIButton) {
         sender.isSelected.toggle()
         switch sender {
-        case atmButton:
-            NotificationCenter.default.post(name: .atm, object: atmButton, userInfo: nil)
-        case  chiNhanhButton:
-            NotificationCenter.default.post(name: .chiNhanhButton, object: chiNhanhButton, userInfo: nil)
-        case phongGDButton:
-            NotificationCenter.default.post(name: .phongGDButton, object: nil, userInfo: nil)
-        case truSoChinhButton:
-            NotificationCenter.default.post(name: .truSoChinhButton, object: nil, userInfo: nil)
-            
+        case showAtm:
+            NotificationCenter.default.post(name: .showAtm, object: showAtm, userInfo: nil)
+        case  showBranch:
+            NotificationCenter.default.post(name: .showBranch, object: showBranch, userInfo: nil)
         default:
             break
         }

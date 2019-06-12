@@ -414,7 +414,7 @@
                                 <rect key="frame" x="0.0" y="537.5" width="414" height="275.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="82" id="n9q-Zf-Q5b" customClass="TableViewCell" customModule="AppVietcombank" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="82" id="n9q-Zf-Q5b" customClass="TableViewCell" customModule="AppVietcombank" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="82"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="n9q-Zf-Q5b" id="6Dc-mK-xkm">
@@ -554,7 +554,7 @@
                                                             <state key="normal" title="Bỏ chọn">
                                                                 <color key="titleColor" red="0.059989626829999997" green="0.72523397840000003" blue="0.36248284079999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </state>
-                                                            <state key="selected" title="Chon tat ca">
+                                                            <state key="selected" title="Chọn tất cả">
                                                                 <color key="titleColor" red="0.059989626829999997" green="0.72523397840000003" blue="0.36248284079999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </state>
                                                             <connections>
@@ -811,12 +811,11 @@
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="TGx-kE-3Ug"/>
                     <connections>
-                        <outlet property="atmButton" destination="sFq-iG-Qxt" id="vpj-8n-hV3"/>
                         <outlet property="checkAll" destination="Xlt-6I-L7K" id="ZSD-Ve-nIq"/>
-                        <outlet property="chiNhanhButton" destination="zca-Sb-0uc" id="OuQ-WH-rdI"/>
                         <outlet property="coverButton" destination="Syd-rN-dPG" id="Hsp-FA-Ov2"/>
-                        <outlet property="phongGDButton" destination="cSd-iX-HeN" id="YSX-UO-Cf9"/>
-                        <outlet property="truSoChinhButton" destination="RB4-nC-KJ9" id="rfF-BC-bKQ"/>
+                        <outlet property="showAll" destination="Xlt-6I-L7K" id="zRu-JT-sHq"/>
+                        <outlet property="showAtm" destination="sFq-iG-Qxt" id="nYd-89-5f6"/>
+                        <outlet property="showBranch" destination="zca-Sb-0uc" id="yLg-pb-lAr"/>
                         <outletCollection property="allButtonList" destination="zca-Sb-0uc" collectionClass="NSMutableArray" id="nam-1R-q22"/>
                         <outletCollection property="allButtonList" destination="sFq-iG-Qxt" collectionClass="NSMutableArray" id="uff-tF-biL"/>
                         <outletCollection property="allButtonList" destination="cSd-iX-HeN" collectionClass="NSMutableArray" id="LAf-9s-pR4"/>
@@ -897,24 +896,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a9h-v0-Qax" customClass="GMSMapView">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="270"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="418"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-marker" translatesAutoresizingMaskIntoConstraints="NO" id="cCi-RM-IGs">
-                                <rect key="frame" x="288" y="96" width="24" height="24"/>
+                                <rect key="frame" x="199" y="159" width="16" height="16"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.84999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ln8-ba-mc4">
-                                <rect key="frame" x="0.0" y="300" width="600" height="0.0"/>
+                                <rect key="frame" x="0.0" y="448" width="414" height="0.0"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vZp-qn-no7" customClass="DesignableView" customModule="AppVietcombank" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="353" height="30"/>
+                                <rect key="frame" x="0.0" y="0.0" width="243.5" height="45"/>
                                 <subviews>
                                     <textField clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="r4a-zq-6Lj">
-                                        <rect key="frame" x="22" y="0.0" width="331" height="30"/>
+                                        <rect key="frame" x="29.5" y="0.0" width="214" height="45"/>
                                         <color key="backgroundColor" white="1" alpha="0.12938784246575341" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <string key="placeholder" base64-UTF8="YES">
 FlZ1aSBsw7JuZyBuaOG6rXAgxJHhu4thIGNo4buJA
@@ -924,7 +923,7 @@ FlZ1aSBsw7JuZyBuaOG6rXAgxJHhu4thIGNo4buJA
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search_filled" translatesAutoresizingMaskIntoConstraints="NO" id="Iaj-UN-PX7">
-                                        <rect key="frame" x="5" y="0.0" width="15" height="30"/>
+                                        <rect key="frame" x="5" y="0.0" width="22.5" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Iaj-UN-PX7" secondAttribute="height" multiplier="1/2" id="FD4-yD-W8q"/>
                                         </constraints>
@@ -945,7 +944,7 @@ FlZ1aSBsw7JuZyBuaOG6rXAgxJHhu4thIGNo4buJA
                                         <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="bottomBorder" value="YES"/>
                                 </userDefinedRuntimeAttributes>

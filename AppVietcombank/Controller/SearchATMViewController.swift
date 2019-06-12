@@ -8,13 +8,13 @@
 
 import UIKit
 extension Notification.Name {
-    static let key = Notification.Name("key")
+    static let dataBankOnMap = Notification.Name("dataBankOnMap")
 }
 
 enum SegueIdentifier : String {
     case embedMapVC = "embedMapVC"
-    case webViewVc = "webViewVc"
-    case PopupView = "PopupView"
+    case webViewVc  = "webViewVc"
+    case PopupView  = "PopupView"
 }
 class SearchATMViewController: UIViewController, UIPopoverPresentationControllerDelegate {
     
@@ -30,11 +30,9 @@ class SearchATMViewController: UIViewController, UIPopoverPresentationController
         super.viewDidLoad()
         DataSevice.shared.makeRequestJson { (data) in
             self.dataMapBank = data
-            NotificationCenter.default.post(name: .key, object: data, userInfo: nil)
+            NotificationCenter.default.post(name: .dataBankOnMap, object: data, userInfo: nil)
             self.tableView.reloadData()
         }
-        
-        
     }
     
     // MARK: Navigation
@@ -57,8 +55,6 @@ class SearchATMViewController: UIViewController, UIPopoverPresentationController
             return 
         }
     }
-    
-    
     func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
         return .none
     }
@@ -68,7 +64,7 @@ class SearchATMViewController: UIViewController, UIPopoverPresentationController
         popupView.isOpen.toggle()
         view.addSubview(popupView)
         popupView.fill(left: 0, top: nil, right: 0, bottom: 0)
-        popupView.topAnchor.constraint(equalTo:(outletNavigartion.bottomAnchor)).isActive = true
+      
         
 //      lay khoang cach navigation
 //        navigationController?.navigationBar
