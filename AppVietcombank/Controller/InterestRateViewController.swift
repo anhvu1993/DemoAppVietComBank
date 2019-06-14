@@ -35,7 +35,7 @@ class InterestRateViewController: UIViewController {
         view.addSubview(showInterestRate)
         showInterestRate.fill(left: 0, top: nil, right: 0, bottom: 0)
         showInterestRate.topAnchor.constraint(equalTo:(slackView.bottomAnchor)).isActive = true
-        
+    
         outletSaving.titleLabel?.alpha = 0.5
     }
     

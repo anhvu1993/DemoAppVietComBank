@@ -29,7 +29,7 @@ class MenuTopView: UIView {
     @IBAction func onClickSelectAllButton(_ sender: UIButton) {
         switch sender {
         case showAll:
-              NotificationCenter.default.post(name: .showAllButton, object: showAll, userInfo: nil)
+        NotificationCenter.default.post(name: .showAllButton, object: showAll, userInfo: nil)
         default:
             break
         }

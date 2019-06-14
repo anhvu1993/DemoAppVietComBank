@@ -64,7 +64,7 @@ class SearchATMViewController: UIViewController, UIPopoverPresentationController
         popupView.isOpen.toggle()
         view.addSubview(popupView)
         popupView.fill(left: 0, top: nil, right: 0, bottom: 0)
-      
+        popupView.topAnchor.constraint(equalTo: outletNavigartion.bottomAnchor).isActive = true
         
 //      lay khoang cach navigation
 //        navigationController?.navigationBar

@@ -19,7 +19,6 @@ class ShowInteresinterRate: UIView {
             }
         }
     }
-    
     var vndRateViewcontroller = VndRateViewController()
     var usdRateViewController = UsdRateViewController()
     var eurRateViewController = EurRateViewController()
