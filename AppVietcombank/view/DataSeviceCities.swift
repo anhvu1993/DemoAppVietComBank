@@ -9,6 +9,7 @@
 import Foundation
 
 typealias DICT = Dictionary<AnyHashable, Any>
+
 class DataSeviceCities {
     static let shared : DataSeviceCities = DataSeviceCities()
     lazy var dataCitis: [Cities] = {

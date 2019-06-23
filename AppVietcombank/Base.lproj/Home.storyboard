@@ -168,6 +168,9 @@
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ekw-ez-Ggw">
                                                 <rect key="frame" x="0.0" y="0.0" width="206.5" height="134.5"/>
+                                                <connections>
+                                                    <segue destination="hUD-Bb-FSH" kind="show" id="4LT-1b-hAl"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -320,7 +323,7 @@
         <!--Địa điểm ATM/Chi nhánh-->
         <scene sceneID="3kq-BP-4mT">
             <objects>
-                <viewController title="Địa điểm ATM/Chi nhánh" id="dWt-tc-1Y6" customClass="SearchATMViewController" customModule="AppVietcombank" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Địa điểm ATM/Chi nhánh" id="dWt-tc-1Y6" customClass="AddresAtmBrankViewController" customModule="AppVietcombank" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5iD-qq-gms">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -393,7 +396,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.701171875" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="Zjs-Ag-W0G" firstAttribute="leading" secondItem="jfy-ge-2AE" secondAttribute="leading" id="PVF-yd-lck"/>
                                     <constraint firstItem="Zjs-Ag-W0G" firstAttribute="centerY" secondItem="jfy-ge-2AE" secondAttribute="centerY" id="W2w-RQ-evw"/>
@@ -404,17 +407,13 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                         <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bottomBorder" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dJh-0Q-k6i">
                                 <rect key="frame" x="0.0" y="537.5" width="414" height="275.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="82" id="n9q-Zf-Q5b" customClass="TableViewCell" customModule="AppVietcombank" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="82" id="n9q-Zf-Q5b" customClass="ShowAtmBranchTableViewCell" customModule="AppVietcombank" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="82"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="n9q-Zf-Q5b" id="6Dc-mK-xkm">
@@ -879,6 +878,16 @@
             </objects>
             <point key="canvasLocation" x="-20.289855072463769" y="101.78571428571428"/>
         </scene>
+        <!--ExchangerRate-->
+        <scene sceneID="ZUC-gM-TiZ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Exchangerate" referencedIdentifier="ExchangerRate" id="hUD-Bb-FSH" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="xWI-tV-NNT"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PWd-aI-zQj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="332" y="569"/>
+        </scene>
         <!--InterestRate-->
         <scene sceneID="les-Ff-e4W">
             <objects>
@@ -887,10 +896,10 @@
             </objects>
             <point key="canvasLocation" x="654" y="566"/>
         </scene>
-        <!--MapATM View Controller-->
+        <!--Map Atm Brank View Controller-->
         <scene sceneID="Jne-y5-wIB">
             <objects>
-                <viewController storyboardIdentifier="MapAtmVC" id="EG9-aW-uLt" customClass="MapATMViewController" customModule="AppVietcombank" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MapAtmVC" id="EG9-aW-uLt" customClass="MapAtmBrankViewController" customModule="AppVietcombank" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="896-nx-Ksq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="448"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -902,31 +911,44 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-marker" translatesAutoresizingMaskIntoConstraints="NO" id="cCi-RM-IGs">
                                 <rect key="frame" x="195" y="155" width="24" height="24"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.84999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ln8-ba-mc4">
-                                <rect key="frame" x="0.0" y="448" width="414" height="0.0"/>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.84999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ln8-ba-mc4" customClass="Label" customModule="AppVietcombank" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="398" width="414" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="1pQ-4k-f5m"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vZp-qn-no7" customClass="DesignableView" customModule="AppVietcombank" customModuleProvider="target">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vZp-qn-no7" customClass="DesignableView" customModule="AppVietcombank" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="243.5" height="45"/>
                                 <subviews>
                                     <textField clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Nhập địa chỉ" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="r4a-zq-6Lj">
                                         <rect key="frame" x="29.5" y="0.0" width="214" height="45"/>
-                                        <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="1" alpha="0.69640946061643838" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="bottomBorder" value="YES"/>
-                                        </userDefinedRuntimeAttributes>
                                     </textField>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search_filled" translatesAutoresizingMaskIntoConstraints="NO" id="Iaj-UN-PX7">
                                         <rect key="frame" x="5" y="0.0" width="22.5" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Iaj-UN-PX7" secondAttribute="height" multiplier="1/2" id="FD4-yD-W8q"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="0.28844713184931509" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -943,10 +965,6 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                         <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bottomBorder" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>

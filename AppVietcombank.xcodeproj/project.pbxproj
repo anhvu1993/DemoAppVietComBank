@@ -8,16 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		0407EAA2229B86D700EAF655 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0407EAA1229B86D700EAF655 /* AppDelegate.swift */; };
-		0407EAA4229B86D700EAF655 /* SearchATMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0407EAA3229B86D700EAF655 /* SearchATMViewController.swift */; };
+		0407EAA4229B86D700EAF655 /* AddresAtmBrankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0407EAA3229B86D700EAF655 /* AddresAtmBrankViewController.swift */; };
 		0407EAA7229B86D700EAF655 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0407EAA5229B86D700EAF655 /* Home.storyboard */; };
 		0407EAA9229B86D700EAF655 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0407EAA8229B86D700EAF655 /* Assets.xcassets */; };
 		0407EAAC229B86D700EAF655 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0407EAAA229B86D700EAF655 /* LaunchScreen.storyboard */; };
-		0407EABD229B984F00EAF655 /* MapATMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0407EABC229B984F00EAF655 /* MapATMViewController.swift */; };
+		0407EABD229B984F00EAF655 /* MapAtmBrankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0407EABC229B984F00EAF655 /* MapAtmBrankViewController.swift */; };
 		041FC60722A56B39000F6315 /* Bank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041FC60622A56B38000F6315 /* Bank.swift */; };
 		0424629622A7976B0036C4E4 /* InterestRate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0424629522A7976B0036C4E4 /* InterestRate.storyboard */; };
 		0424629822A79ADD0036C4E4 /* InterestRateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424629722A79ADD0036C4E4 /* InterestRateViewController.swift */; };
 		045CD50F22AF5AD3003E69B9 /* ShowInterestRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045CD50E22AF5AD3003E69B9 /* ShowInterestRate.swift */; };
-		0473E44B229FD89E0083FB08 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0473E44A229FD89E0083FB08 /* TableViewCell.swift */; };
+		04657C8C22B47EAF00FB0BE2 /* Exchangerate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04657C8B22B47EAF00FB0BE2 /* Exchangerate.storyboard */; };
+		04657C8E22B4872E00FB0BE2 /* ExchangerateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04657C8D22B4872E00FB0BE2 /* ExchangerateViewController.swift */; };
+		04657C9022B487A400FB0BE2 /* ExchangerRateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04657C8F22B487A300FB0BE2 /* ExchangerRateCell.swift */; };
+		04657C9222B4894F00FB0BE2 /* Exchangerate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04657C9122B4894F00FB0BE2 /* Exchangerate.swift */; };
+		04657CB222B4EF5C00FB0BE2 /* ShowExchangerRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04657CB122B4EF5C00FB0BE2 /* ShowExchangerRate.swift */; };
+		0473E44B229FD89E0083FB08 /* ShowAtmBranchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0473E44A229FD89E0083FB08 /* ShowAtmBranchTableViewCell.swift */; };
 		0497688F22A4B2B1001463E9 /* WebGooglemaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0497688E22A4B2B1001463E9 /* WebGooglemaoViewController.swift */; };
 		0497689122A4C574001463E9 /* Cities.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0497689022A4C574001463E9 /* Cities.plist */; };
 		0497689322A4C57D001463E9 /* Districts.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0497689222A4C57D001463E9 /* Districts.plist */; };
@@ -29,26 +34,32 @@
 		049821DE229E310000B17721 /* UIView-extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049821DD229E310000B17721 /* UIView-extention.swift */; };
 		049821E0229E885800B17721 /* ATM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049821DF229E885800B17721 /* ATM.swift */; };
 		049821E3229E899400B17721 /* DataSevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049821E2229E899400B17721 /* DataSevice.swift */; };
-		04BF2BB222A914CF00D659B6 /* customSegmented.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF2BB122A914CF00D659B6 /* customSegmented.swift */; };
 		04C1FACA22AA0DC30006AC77 /* Interestrate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C1FAC922AA0DC30006AC77 /* Interestrate.swift */; };
-		04C808AA229D427F004C715E /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C808A9229D427F004C715E /* UIViewExtension.swift */; };
+		04C808AA229D427F004C715E /* LockUnlockMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C808A9229D427F004C715E /* LockUnlockMap.swift */; };
+		04D4EF5C22B32D700056955E /* Activityes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D4EF5B22B32D700056955E /* Activityes.swift */; };
+		04D4EF5E22B337310056955E /* CustomActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D4EF5D22B337310056955E /* CustomActivityIndicatorView.swift */; };
 		22B2B336DC44929EEDD1A51A /* Pods_AppVietcombank.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46B0CFEF4AE5EE85AFE8AEFB /* Pods_AppVietcombank.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0407EA9E229B86D700EAF655 /* AppVietcombank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppVietcombank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0407EAA1229B86D700EAF655 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0407EAA3229B86D700EAF655 /* SearchATMViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchATMViewController.swift; sourceTree = "<group>"; };
+		0407EAA3229B86D700EAF655 /* AddresAtmBrankViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddresAtmBrankViewController.swift; sourceTree = "<group>"; };
 		0407EAA6229B86D700EAF655 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		0407EAA8229B86D700EAF655 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0407EAAB229B86D700EAF655 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0407EAAD229B86D700EAF655 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0407EABC229B984F00EAF655 /* MapATMViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapATMViewController.swift; sourceTree = "<group>"; };
+		0407EABC229B984F00EAF655 /* MapAtmBrankViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAtmBrankViewController.swift; sourceTree = "<group>"; };
 		041FC60622A56B38000F6315 /* Bank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bank.swift; sourceTree = "<group>"; };
 		0424629522A7976B0036C4E4 /* InterestRate.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InterestRate.storyboard; sourceTree = "<group>"; };
 		0424629722A79ADD0036C4E4 /* InterestRateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestRateViewController.swift; sourceTree = "<group>"; };
 		045CD50E22AF5AD3003E69B9 /* ShowInterestRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowInterestRate.swift; sourceTree = "<group>"; };
-		0473E44A229FD89E0083FB08 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		04657C8B22B47EAF00FB0BE2 /* Exchangerate.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Exchangerate.storyboard; sourceTree = "<group>"; };
+		04657C8D22B4872E00FB0BE2 /* ExchangerateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangerateViewController.swift; sourceTree = "<group>"; };
+		04657C8F22B487A300FB0BE2 /* ExchangerRateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangerRateCell.swift; sourceTree = "<group>"; };
+		04657C9122B4894F00FB0BE2 /* Exchangerate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exchangerate.swift; sourceTree = "<group>"; };
+		04657CB122B4EF5C00FB0BE2 /* ShowExchangerRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowExchangerRate.swift; sourceTree = "<group>"; };
+		0473E44A229FD89E0083FB08 /* ShowAtmBranchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAtmBranchTableViewCell.swift; sourceTree = "<group>"; };
 		0497688E22A4B2B1001463E9 /* WebGooglemaoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebGooglemaoViewController.swift; sourceTree = "<group>"; };
 		0497689022A4C574001463E9 /* Cities.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Cities.plist; sourceTree = "<group>"; };
 		0497689222A4C57D001463E9 /* Districts.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Districts.plist; sourceTree = "<group>"; };
@@ -60,9 +71,10 @@
 		049821DD229E310000B17721 /* UIView-extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView-extention.swift"; sourceTree = "<group>"; };
 		049821DF229E885800B17721 /* ATM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATM.swift; sourceTree = "<group>"; };
 		049821E2229E899400B17721 /* DataSevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSevice.swift; sourceTree = "<group>"; };
-		04BF2BB122A914CF00D659B6 /* customSegmented.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customSegmented.swift; sourceTree = "<group>"; };
 		04C1FAC922AA0DC30006AC77 /* Interestrate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interestrate.swift; sourceTree = "<group>"; };
-		04C808A9229D427F004C715E /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		04C808A9229D427F004C715E /* LockUnlockMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockUnlockMap.swift; sourceTree = "<group>"; };
+		04D4EF5B22B32D700056955E /* Activityes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activityes.swift; sourceTree = "<group>"; };
+		04D4EF5D22B337310056955E /* CustomActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomActivityIndicatorView.swift; sourceTree = "<group>"; };
 		298E4541A5F60FD329D83F9E /* Pods-AppVietcombank.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppVietcombank.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppVietcombank/Pods-AppVietcombank.release.xcconfig"; sourceTree = "<group>"; };
 		46B0CFEF4AE5EE85AFE8AEFB /* Pods_AppVietcombank.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppVietcombank.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6A1F4E96C8BC7298649B077 /* Pods-AppVietcombank.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppVietcombank.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AppVietcombank/Pods-AppVietcombank.debug.xcconfig"; sourceTree = "<group>"; };
@@ -106,6 +118,7 @@
 				0407EAB5229B88A200EAF655 /* Controller */,
 				0407EAA5229B86D700EAF655 /* Home.storyboard */,
 				0424629522A7976B0036C4E4 /* InterestRate.storyboard */,
+				04657C8B22B47EAF00FB0BE2 /* Exchangerate.storyboard */,
 				0407EAA1229B86D700EAF655 /* AppDelegate.swift */,
 				0407EAA8229B86D700EAF655 /* Assets.xcassets */,
 				0407EAAA229B86D700EAF655 /* LaunchScreen.storyboard */,
@@ -124,6 +137,7 @@
 				0497689822A4C8E1001463E9 /* Districts.swift */,
 				041FC60622A56B38000F6315 /* Bank.swift */,
 				04C1FAC922AA0DC30006AC77 /* Interestrate.swift */,
+				04657C9122B4894F00FB0BE2 /* Exchangerate.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -131,14 +145,17 @@
 		0407EAB4229B889900EAF655 /* view */ = {
 			isa = PBXGroup;
 			children = (
-				04C808A9229D427F004C715E /* UIViewExtension.swift */,
+				04C808A9229D427F004C715E /* LockUnlockMap.swift */,
 				049821DD229E310000B17721 /* UIView-extention.swift */,
 				049821DA229E2D4E00B17721 /* MenuTopView.swift */,
 				045CD50E22AF5AD3003E69B9 /* ShowInterestRate.swift */,
+				04657CB122B4EF5C00FB0BE2 /* ShowExchangerRate.swift */,
 				049821E2229E899400B17721 /* DataSevice.swift */,
-				0473E44A229FD89E0083FB08 /* TableViewCell.swift */,
+				0473E44A229FD89E0083FB08 /* ShowAtmBranchTableViewCell.swift */,
+				04657C8F22B487A300FB0BE2 /* ExchangerRateCell.swift */,
 				0497689622A4C73F001463E9 /* DataSeviceCities.swift */,
-				04BF2BB122A914CF00D659B6 /* customSegmented.swift */,
+				04D4EF5B22B32D700056955E /* Activityes.swift */,
+				04D4EF5D22B337310056955E /* CustomActivityIndicatorView.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -146,11 +163,12 @@
 		0407EAB5229B88A200EAF655 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				0407EAA3229B86D700EAF655 /* SearchATMViewController.swift */,
-				0407EABC229B984F00EAF655 /* MapATMViewController.swift */,
+				0407EAA3229B86D700EAF655 /* AddresAtmBrankViewController.swift */,
+				0407EABC229B984F00EAF655 /* MapAtmBrankViewController.swift */,
 				0497688E22A4B2B1001463E9 /* WebGooglemaoViewController.swift */,
 				0497689A22A4CF39001463E9 /* BaseTableViewController.swift */,
 				0424629722A79ADD0036C4E4 /* InterestRateViewController.swift */,
+				04657C8D22B4872E00FB0BE2 /* ExchangerateViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -232,6 +250,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04657C8C22B47EAF00FB0BE2 /* Exchangerate.storyboard in Resources */,
 				0407EAAC229B86D700EAF655 /* LaunchScreen.storyboard in Resources */,
 				0497689322A4C57D001463E9 /* Districts.plist in Resources */,
 				0407EAA9229B86D700EAF655 /* Assets.xcassets in Resources */,
@@ -303,21 +322,26 @@
 				041FC60722A56B39000F6315 /* Bank.swift in Sources */,
 				0497689922A4C8E1001463E9 /* Districts.swift in Sources */,
 				049821E3229E899400B17721 /* DataSevice.swift in Sources */,
-				0407EAA4229B86D700EAF655 /* SearchATMViewController.swift in Sources */,
+				04D4EF5C22B32D700056955E /* Activityes.swift in Sources */,
+				0407EAA4229B86D700EAF655 /* AddresAtmBrankViewController.swift in Sources */,
 				049821E0229E885800B17721 /* ATM.swift in Sources */,
 				049821DE229E310000B17721 /* UIView-extention.swift in Sources */,
 				0497689722A4C73F001463E9 /* DataSeviceCities.swift in Sources */,
-				0473E44B229FD89E0083FB08 /* TableViewCell.swift in Sources */,
+				0473E44B229FD89E0083FB08 /* ShowAtmBranchTableViewCell.swift in Sources */,
 				04C1FACA22AA0DC30006AC77 /* Interestrate.swift in Sources */,
+				04657C9022B487A400FB0BE2 /* ExchangerRateCell.swift in Sources */,
+				04657CB222B4EF5C00FB0BE2 /* ShowExchangerRate.swift in Sources */,
+				04657C9222B4894F00FB0BE2 /* Exchangerate.swift in Sources */,
 				0424629822A79ADD0036C4E4 /* InterestRateViewController.swift in Sources */,
+				04657C8E22B4872E00FB0BE2 /* ExchangerateViewController.swift in Sources */,
+				04D4EF5E22B337310056955E /* CustomActivityIndicatorView.swift in Sources */,
 				0407EAA2229B86D700EAF655 /* AppDelegate.swift in Sources */,
-				04BF2BB222A914CF00D659B6 /* customSegmented.swift in Sources */,
 				045CD50F22AF5AD3003E69B9 /* ShowInterestRate.swift in Sources */,
 				0497688F22A4B2B1001463E9 /* WebGooglemaoViewController.swift in Sources */,
 				0497689B22A4CF3A001463E9 /* BaseTableViewController.swift in Sources */,
 				049821DB229E2D4E00B17721 /* MenuTopView.swift in Sources */,
-				04C808AA229D427F004C715E /* UIViewExtension.swift in Sources */,
-				0407EABD229B984F00EAF655 /* MapATMViewController.swift in Sources */,
+				04C808AA229D427F004C715E /* LockUnlockMap.swift in Sources */,
+				0407EABD229B984F00EAF655 /* MapAtmBrankViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

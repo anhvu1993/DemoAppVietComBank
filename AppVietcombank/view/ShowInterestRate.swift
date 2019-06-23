@@ -10,9 +10,11 @@ import Foundation
 import UIKit
 class ShowInteresinterRate: UIView {
     @IBOutlet weak var segmented: UISegmentedControl!
-    @IBOutlet weak var segmentedController: TabySegmentedControl!
     var isOpen:Bool = false {
         didSet {
+            segmented.selectedSegmentIndex = 0
+            self.tableView.dataSource = vndRateViewcontroller
+            self.tableView.reloadData()
             self.alpha = self.isOpen ? 1 : 0
             if !isOpen {
                 self.removeFromSuperview()
@@ -27,11 +29,9 @@ class ShowInteresinterRate: UIView {
         super.awakeFromNib()
         setupTableView()
         tableView.dataSource = vndRateViewcontroller
-//        tableView.dataSource = self
-//        tableView.delegate = self
     }
     func setupTableView() {
-        tableView.showsVerticalScrollIndicator = false
+        tableView.showsVerticalScrollIndicator   = false
         tableView.showsHorizontalScrollIndicator = false
         tableView.backgroundColor = UIColor.white
         tableView.isScrollEnabled = true
@@ -71,7 +71,7 @@ class VndRateViewController: NSObject, UITableViewDelegate, UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        var dataRate = monthAndrate[indexPath.row]
+        let dataRate = monthAndrate[indexPath.row]
         cell.textLabel?.text = ("Tháng \(dataRate.month)")
         cell.detailTextLabel?.text = ("\(dataRate.rate)%")
         return cell

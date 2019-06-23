@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TableViewCell: UITableViewCell {
+class ShowAtmBranchTableViewCell: UITableViewCell {
     @IBOutlet weak var logo: UIImageView!
     @IBOutlet weak var branch: UILabel!
     @IBOutlet weak var address: UILabel!

@@ -11,28 +11,26 @@ import UIKit
 class BaseTableViewController: UITableViewController, UISearchBarDelegate, UISearchControllerDelegate, UISearchResultsUpdating  {
     
     var filteredCities = [Name]()
-    let searchController = UISearchController(searchResultsController: nil)
     var dislayPlace: [Name] = []
     var resultSearchController = UISearchController()
+    let searchController = UISearchController(searchResultsController: nil)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        callsearch2()
+        callsearch()
     }
-    
-    // MARK : take searchbar
-    func callsearch2() {
+// MARK : take searchbar
+    func callsearch() {
         resultSearchController = ({
             let controller = UISearchController(searchResultsController: nil)
             controller.searchResultsUpdater = self
             controller.dimsBackgroundDuringPresentation = false
             controller.searchBar.sizeToFit()
             tableView.tableHeaderView = controller.searchBar
-            
             return controller
         })()
         tableView.reloadData()
     }
-    
     func callSearchbar (){
         searchController.searchResultsUpdater = self
         searchController.hidesNavigationBarDuringPresentation = false
@@ -47,18 +45,18 @@ class BaseTableViewController: UITableViewController, UISearchBarDelegate, UISea
         // Returns true if the text is empty or nil
         return resultSearchController.searchBar.text?.isEmpty ?? true
     }
-    // loc noi dung
+// MARK: loc noi dung
     func filterContentForSearchText(_ searchText: String, scope: String = "All") {
         filteredCities = dislayPlace.filter({( cities : Name) -> Bool in
             return cities.name.lowercased().asciiString!.contains(searchText.lowercased().asciiString!)
         })
         tableView.reloadData()
     }
-    // dang loc
+// MARK: dang loc
     func  isFiltering () -> Bool {
         return resultSearchController.isActive && !searchBarIsEmpty ()
     }
-    //    MARK: tableView
+// MARK: UItableView
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if isFiltering() {
             return filteredCities.count
@@ -66,7 +64,7 @@ class BaseTableViewController: UITableViewController, UISearchBarDelegate, UISea
         return dislayPlace.count
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+    let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         var cities:Name?
         if isFiltering() {
             cities = filteredCities[indexPath.row]
@@ -76,11 +74,9 @@ class BaseTableViewController: UITableViewController, UISearchBarDelegate, UISea
         cell.textLabel?.text = cities?.name
         return cell
     }
-    
     func updateSearchResults(for searchController: UISearchController) {
         filterContentForSearchText(searchController.searchBar.text!)
     }
-    
 }
 class CitiesViewController: BaseTableViewController {
     override func viewDidLoad() {
@@ -96,25 +92,20 @@ class CitiesViewController: BaseTableViewController {
             } else {
                 DataSeviceCities.shared.selecterCity = DataSeviceCities.shared.dataCitis[indexPath.row]
                 UserDefaults.standard.set(DataSeviceCities.shared.dataCitis[indexPath.row].name, forKey: "Cities")
-                
-            }}
+            }
+        }
     }
-    
     @IBAction func CancelHome(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
-    
 }
 
 class DistrictsViewController: BaseTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         dislayPlace = DataSeviceCities.shared.selecteDistricts
-        
     }
-    
-    
-    // MARK: Open app
+// MARK: Open app
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         UserDefaults.standard.set(DataSeviceCities.shared.selecteDistricts[indexPath.row].name, forKey: "Districts")
         if let urlApp = URL(string: "GoogleMaps://"){
@@ -123,7 +114,6 @@ class DistrictsViewController: BaseTableViewController {
             let appName = "GoogleMaps"
             let appScheme = "\(appName)://"
             let appSchemURL = URL(string: appScheme)
-            
             if UIApplication.shared.canOpenURL(appSchemURL as! URL) {
                 UIApplication.shared.open(appSchemURL!, options: [:], completionHandler: nil)
             }else {
@@ -133,10 +123,9 @@ class DistrictsViewController: BaseTableViewController {
             }
         }
     }
-    
 }
 
-// fintered tieng viet
+// MARK: fintered tieng viet
 extension String {
     var asciiString: String? {
         if let data = self.data(using: String.Encoding.ascii, allowLossyConversion: true){

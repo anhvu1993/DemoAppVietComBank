@@ -74,7 +74,7 @@
                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Bv6-sP-duU" customClass="TabySegmentedControl" customModule="AppVietcombank" customModuleProvider="target">
+                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Bv6-sP-duU">
                                                         <rect key="frame" x="0.0" y="28.5" width="345" height="29"/>
                                                         <segments>
                                                             <segment title="VND"/>
@@ -241,7 +241,7 @@
                                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="nJn-NK-lxG" customClass="TabySegmentedControl" customModule="AppVietcombank" customModuleProvider="target">
+                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="nJn-NK-lxG">
                                                     <rect key="frame" x="0.0" y="28.5" width="367" height="29"/>
                                                     <segments>
                                                         <segment title="VND"/>
@@ -364,7 +364,6 @@
                     <viewLayoutGuide key="safeArea" id="oCd-1j-bno"/>
                     <connections>
                         <outlet property="segmented" destination="nJn-NK-lxG" id="UMg-Hy-lSe"/>
-                        <outlet property="segmentedController" destination="nJn-NK-lxG" id="Q0b-ea-36p"/>
                         <outlet property="tableView" destination="ZOt-rF-jAt" id="bd3-xf-rOp"/>
                     </connections>
                 </view>

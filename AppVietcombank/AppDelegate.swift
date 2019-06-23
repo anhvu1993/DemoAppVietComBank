@@ -15,14 +15,13 @@ import GooglePlacePicker
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
     var key:String = "AIzaSyABSe2pR3ZIf4KLI2SFXE7z17N63LvdaPA"
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         GMSServices.provideAPIKey(key)
         GMSPlacesClient.provideAPIKey(key)
         GMSServices.provideAPIKey(key)
         GMSPlacesClient.provideAPIKey(key)
-        // Override point for customization after application launch.
         return true
     }
 

@@ -16,77 +16,88 @@ enum SegueIdentifier : String {
     case webViewVc  = "webViewVc"
     case PopupView  = "PopupView"
 }
-class SearchATMViewController: UIViewController, UIPopoverPresentationControllerDelegate {
+
+class AddresAtmBrankViewController: UIViewController, UIPopoverPresentationControllerDelegate {
+    lazy private var activityIndicator : CustomActivityIndicatorView = {
+        let image : UIImage = UIImage(named: "loading")!
+        return CustomActivityIndicatorView(image: image)
+    }()
     
-    var atmMapViewController: MapATMViewController?
+    var atmMapViewController: MapAtmBrankViewController?
+    var dataMapBank = [ATM]()
     
-//    @IBOutlet var popupAdress: PopupView!
     @IBOutlet var popupView: MenuTopView!
     @IBOutlet weak var outletNavigartion: UIView!
     @IBOutlet weak var tableView: UITableView!
-    var dataMapBank = [ATM]()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadActivity()
+       getDataAddressAtmBranch()
+    }
+    func getDataAddressAtmBranch() {
         DataSevice.shared.makeRequestJson { (data) in
             self.dataMapBank = data
             NotificationCenter.default.post(name: .dataBankOnMap, object: data, userInfo: nil)
             self.tableView.reloadData()
         }
     }
-    
-    // MARK: Navigation
+//    MARK : Activity
+    func loadActivity() {
+        activityIndicator.startAnimating()
+        addLoadingIndicator()
+    }
+    func addLoadingIndicator () {
+        self.view.addSubview(activityIndicator)
+        activityIndicator.center = self.view.center
+    }
+//  MARK: segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier ?? "" {
         case SegueIdentifier.embedMapVC.rawValue:
-            atmMapViewController = segue.destination as? MapATMViewController
+            atmMapViewController = segue.destination as? MapAtmBrankViewController
         case SegueIdentifier.webViewVc.rawValue:
             guard let navigationController = segue.destination as? UINavigationController else {return}
             guard let webGooglemaoViewController = navigationController.topViewController as? WebGooglemaoViewController else {return}
-           if let indexPath = tableView.indexPathForSelectedRow {
-             webGooglemaoViewController.webGoogleMap = dataMapBank[indexPath.row].googleUrl
+            if let indexPath = tableView.indexPathForSelectedRow {
+                webGooglemaoViewController.webGoogleMap = dataMapBank[indexPath.row].googleUrl
             }
+//    MARK: Popover
         case SegueIdentifier.PopupView.rawValue:
             let vc = segue.destination
             let pc = vc.popoverPresentationController
             pc?.delegate = self
             pc?.sourceRect = CGRect(origin: view.center, size: .zero)
         default:
-            return 
+            break
         }
     }
+//    MARK: Popover
     func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
         return .none
     }
     
-    
+//   MARK: Menutop
     @IBAction func actionPopup(_ sender: UIButton) {
         popupView.isOpen.toggle()
         view.addSubview(popupView)
         popupView.fill(left: 0, top: nil, right: 0, bottom: 0)
         popupView.topAnchor.constraint(equalTo: outletNavigartion.bottomAnchor).isActive = true
-        
-//      lay khoang cach navigation
-//        navigationController?.navigationBar
-        
+        //      lay khoang cach navigation
+        //        navigationController?.navigationBar
     }
-    
-//    @IBAction func clickPopupAdress(_ sender: Any) {
-//        popupAdress.onAdress.toggle()
-//        view.addSubview(popupAdress)
-//        popupAdress.fill(left: 0, top: 0, right: 0, bottom: 0)
-//    }
-    
     @IBAction func cancelHome(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
 }
-extension SearchATMViewController: UITableViewDelegate, UITableViewDataSource {
+
+// MARK : UITableViewDataSource
+extension AddresAtmBrankViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataMapBank.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ShowAtmBranchTableViewCell else { return UITableViewCell()}
         let listDataMapBank = dataMapBank[indexPath.row]
         cell.branch.text = listDataMapBank.name
         cell.address.text = listDataMapBank.addressbank
@@ -94,11 +105,15 @@ extension SearchATMViewController: UITableViewDelegate, UITableViewDataSource {
         do {
             let data = try? Data(contentsOf: url!)
             cell.logo.image = UIImage(data: data!)
-            
         }
+// MARK :  top Activity
+        activityIndicator.stopAnimating()
         return cell
-        
     }
+}
+
+// MARK : UITableViewDelegate
+extension AddresAtmBrankViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         atmMapViewController?.atm = dataMapBank[indexPath.row]
     }
@@ -106,6 +121,4 @@ extension SearchATMViewController: UITableViewDelegate, UITableViewDataSource {
         return 60
     }
 }
-
-
 
